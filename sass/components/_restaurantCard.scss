@@ -1,0 +1,43 @@
+.menuCategory {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &__title {
+        font-size: 30px;
+        color: rgb(188, 116, 116);
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        &:after {
+            content: "";
+            height: 3px;
+            width: 55px;
+            background: rgb(188, 116, 116);
+        }
+    }
+    .card {
+        border-radius: 16px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.33);
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        &__price {
+            height: 100%;
+            display: flex;
+           align-self: flex-end; 
+           span:nth-child(2){
+            opacity: 0;
+            margin-right: -40px;
+            transition: all .2s ease-in 0.05s;            
+           }                      
+        }
+        &:hover span:nth-child(2) {
+            margin-right: 0;
+            opacity: 1;
+        }
+    }
+}
+
+
